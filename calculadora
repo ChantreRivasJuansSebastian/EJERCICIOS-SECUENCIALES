@@ -1,45 +1,64 @@
-import sympy as sp
+Proceso Calculadora
 
-def calculadora():
-    print("Calculadora en Python")
-    print("1. Suma")
-    print("2. Resta")
-    print("3. Multiplicación")
-    print("4. División")
-    print("5. Resolver ecuación")
-    print("6. Salir")
+    Definir opcion Como Entero
+    Definir num1, num2 Como Real
 
-    while True:
-        opcion = input("Ingrese una opción: ")
+    Escribir "Calculadora en PSeInt"
+    Escribir "1. Suma"
+    Escribir "2. Resta"
+    Escribir "3. Multiplicación"
+    Escribir "4. División"
+    Escribir "5. Salir"
 
-        if opcion == "1":
-            num1 = float(input("Ingrese el primer número: "))
-            num2 = float(input("Ingrese el segundo número: "))
-            print(f"{num1} + {num2} = {num1 + num2}")
-        elif opcion == "2":
-            num1 = float(input("Ingrese el primer número: "))
-            num2 = float(input("Ingrese el segundo número: "))
-            print(f"{num1} - {num2} = {num1 - num2}")
-        elif opcion == "3":
-            num1 = float(input("Ingrese el primer número: "))
-            num2 = float(input("Ingrese el segundo número: "))
-            print(f"{num1} * {num2} = {num1 * num2}")
-        elif opcion == "4":
-            num1 = float(input("Ingrese el primer número: "))
-            num2 = float(input("Ingrese el segundo número: "))
-            if num2 != 0:
-                print(f"{num1} / {num2} = {num1 / num2}")
-            else:
-                print("Error: división por cero")
-        elif opcion == "5":
-            x = sp.symbols('x')
-            ecuacion = input("Ingrese la ecuación (en términos de x): ")
-            ecuacion = sp.sympify(ecuacion)
-            solucion = sp.solve(ecuacion, x)
-            print(f"Solución: {solucion}")
-        elif opcion == "6":
-            break
-        else:
-            print("Opción inválida")
+    Mientras Verdadero Hacer
 
-calculadora()
+        Escribir "Ingrese una opción:"
+        Leer opcion
+
+        Segun opcion Hacer
+
+            1:
+                Escribir "Ingrese el primer número:"
+                Leer num1
+                Escribir "Ingrese el segundo número:"
+                Leer num2
+                Escribir num1, " + ", num2, " = ", num1 + num2
+
+            2:
+                Escribir "Ingrese el primer número:"
+                Leer num1
+                Escribir "Ingrese el segundo número:"
+                Leer num2
+                Escribir num1, " - ", num2, " = ", num1 - num2
+
+            3:
+                Escribir "Ingrese el primer número:"
+                Leer num1
+                Escribir "Ingrese el segundo número:"
+                Leer num2
+                Escribir num1, " * ", num2, " = ", num1 * num2
+
+            4:
+                Escribir "Ingrese el primer número:"
+                Leer num1
+                Escribir "Ingrese el segundo número:"
+                Leer num2
+
+                Si num2 <> 0 Entonces
+                    Escribir num1, " / ", num2, " = ", num1 / num2
+                Sino
+                    Escribir "Error: división por cero"
+                FinSi
+
+            5:
+                Escribir "Saliendo..."
+                Salir
+
+            De Otro Modo:
+                Escribir "Opción inválida"
+
+        FinSegun
+
+    FinMientras
+
+FinProceso
