@@ -8,7 +8,6 @@ Proceso Calculadora
     Escribir "2. Resta"
     Escribir "3. Multiplicación"
     Escribir "4. División"
-    Escribir "5. Salir"
 
     Mientras Verdadero Hacer
 
